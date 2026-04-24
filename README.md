@@ -9,20 +9,22 @@ This project develops a macro-micro dual-perspective framework for analysing str
 
 ---
 
-## Required Packages and Dependencies
-- Python 3.9
-- OSMnx v1.2.2
-- GeoPandas v0.12.2
-- NetworkX v2.8.8
-- NumPy v1.24.3
-- Matplotlib v3.7.1
-- Jupyter Notebook
+## Code Structure
+```
+Each city has its own dedicated Jupyter Notebook file containing:
+- Complete data retrieval code
+- Topological simplification and preprocessing
+- Indicator calculation
+- Street network map visualisation
+- Orientation rose diagram generation
 
-Install all dependencies:
-pip install osmnx==1.2.2 geopandas==0.12.2 networkx==2.8.8 numpy==1.24.3 matplotlib==3.7.1
-
----
-
+City notebooks included:
+澳门.ipynb / 北京.ipynb / 成都.ipynb / 福州.ipynb / 广州.ipynb
+贵阳.ipynb / 哈尔滨.ipynb / 海口.ipynb / 海口新.ipynb / 杭州.ipynb
+合肥.ipynb / 呼和浩特.ipynb / 济南.ipynb / 昆明.ipynb / 拉萨.ipynb
+兰州.ipynb / 南昌.ipynb / 南京.ipynb / 南宁.ipynb / 上海.ipynb
+深圳.ipynb / 沈阳.ipynb / 石家庄.ipynb ... (34 cities total)
+```
 ## Code Structure
 /pilot_study
   haikou_pilot.ipynb        — Haikou pilot analysis and method validation
