@@ -1,63 +1,35 @@
-# Spatial Network Analysis of Urban Street Layouts
-**Author:** Zhang Shengliang | **BUPT ID:** 2022213756  
-**Programme:** Information and Computational Science | **Institution:** Queen Mary School Hainan / BUPT
+# 城市街道布局空间网络分析
 
----
+**作者：** 张胜良 | **BUPT学号：** 2022213756
+**专业：** 信息与计算科学 | **学校：** 海南女王玛丽学院 / 北京邮电大学
 
-## Project Overview
-This project develops a macro-micro dual-perspective framework for analysing street network morphology across 34 major Chinese cities, including municipalities, provincial capitals, and autonomous region capitals. The framework resolves topological distortions in open-source street data and enables standardised batch analysis across cities with diverse terrains and historical backgrounds.
+## 项目概述
 
----
+本项目针对中国34个主要城市（包括直辖市、省会城市及自治区首府）开发了一套宏微双视角街道网络形态分析框架。该框架解决了开源街道数据中的拓扑失真问题，实现了跨城市的标准化批量分析。
 
-## Code Structure
-Each city has its own dedicated Jupyter Notebook file containing:
-- Complete data retrieval code
-- Topological simplification and preprocessing
-- Indicator calculation
-- Street network map visualisation
-- Orientation rose diagram generation
+## 所需安装包
 
-City notebooks included:
-澳门.ipynb / 北京.ipynb / 成都.ipynb / 福州.ipynb / 广州.ipynb
-贵阳.ipynb / 哈尔滨.ipynb / 海口.ipynb / 海口新.ipynb / 杭州.ipynb
-合肥.ipynb / 呼和浩特.ipynb / 济南.ipynb / 昆明.ipynb / 拉萨.ipynb
-兰州.ipynb / 南昌.ipynb / 南京.ipynb / 南宁.ipynb / 上海.ipynb
-深圳.ipynb / 沈阳.ipynb / 石家庄.ipynb ... (34 cities total)
----
-## Code Structure
-/pilot_study
-  haikou_pilot.ipynb        — Haikou pilot analysis and method validation
+- Python 3.9
+- OSMnx v1.2.2
+- GeoPandas v0.12.2
+- NetworkX v2.8.8
+- NumPy v1.24.3
+- Matplotlib v3.7.1
 
-/batch_analysis
-  batch_34cities.ipynb      — Full 34-city batch processing
+## 数据集说明
 
-/results
-  /network_maps             — Street network maps for all 34 cities
-  /rose_diagrams            — Orientation rose diagrams for all 34 cities
-  core_indicators_34cities.csv  — Complete indicator dataset
+街道网络数据通过OSMnx接口从OpenStreetMap获取。
+每个城市对应一个独立的Notebook文件，包含完整的代码和运行结果。
 
----
+## 运行方法
 
-## Dataset
-Street network data was retrieved from OpenStreetMap via the OSMnx API.
-Data source: https://www.openstreetmap.org
-Administrative boundary data: National Geomatics Centre of China Public Service Platform
+1. 安装上述所需依赖包
+2. 在Jupyter中打开任意城市的Notebook文件
+3. 按顺序运行所有单元格即可
 
-The dataset is self-generated through the provided code. Raw data files are not included as they are publicly available and can be retrieved by running the notebooks.
+## 主要发现
 
----
-
-## How to Run
-1. Install all required packages listed above
-2. Open Jupyter Notebook
-3. Run haikou_pilot.ipynb first to validate the method
-4. Run batch_34cities.ipynb for the full 34-city analysis
-5. Results will be saved automatically to the /results folder
-
----
-
-## Key Findings
-- Terrain is the strongest predictor of street network character
-- Ancient planned cities (Xi'an, Beijing) retain imperial grid logic
-- Hong Kong and Macao produce near-circular orientation rose diagrams, closest to organic European cities in Boeing's global dataset
-- The macro-micro framework reduced pseudo-node counts by over 40% and brought core indicator errors below 3%
+- 地形是街道网络特征最强的预测因素
+- 北京和西安保留了帝制网格逻辑（方向熵约2.9）
+- 香港和澳门的玫瑰图接近圆形（方向熵约3.5）
+- 宏微框架使伪节点数量减少了40%以上
