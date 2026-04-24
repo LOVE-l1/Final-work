@@ -10,7 +10,6 @@ This project develops a macro-micro dual-perspective framework for analysing str
 ---
 
 ## Code Structure
-```
 Each city has its own dedicated Jupyter Notebook file containing:
 - Complete data retrieval code
 - Topological simplification and preprocessing
@@ -24,7 +23,7 @@ City notebooks included:
 合肥.ipynb / 呼和浩特.ipynb / 济南.ipynb / 昆明.ipynb / 拉萨.ipynb
 兰州.ipynb / 南昌.ipynb / 南京.ipynb / 南宁.ipynb / 上海.ipynb
 深圳.ipynb / 沈阳.ipynb / 石家庄.ipynb ... (34 cities total)
-```
+---
 ## Code Structure
 /pilot_study
   haikou_pilot.ipynb        — Haikou pilot analysis and method validation
