@@ -1,13 +1,13 @@
-# 城市街道布局空间网络分析
+# Spatial Network Analysis of Urban Street Layouts
 
-**作者：** 张胜良 | **BUPT学号：** 2022213756
-**专业：** 信息与计算科学 | **学校：** 海南女王玛丽学院 / 北京邮电大学
+**Author:** Zhang Shengliang | **BUPT ID:** 2022213756
+**Programme:** Information and Computational Science | **Institution:** Queen Mary School Hainan / BUPT
 
-## 项目概述
+## Project Overview
 
-本项目针对中国34个主要城市（包括直辖市、省会城市及自治区首府）开发了一套宏微双视角街道网络形态分析框架。该框架解决了开源街道数据中的拓扑失真问题，实现了跨城市的标准化批量分析。
+This project develops a macro-micro dual-perspective framework for analysing street network morphology across 34 major Chinese cities. The framework resolves topological distortions in open-source street data and enables standardised batch analysis.
 
-## 所需安装包
+## Required Packages
 
 - Python 3.9
 - OSMnx v1.2.2
@@ -16,20 +16,20 @@
 - NumPy v1.24.3
 - Matplotlib v3.7.1
 
-## 数据集说明
+## Dataset
 
-街道网络数据通过OSMnx接口从OpenStreetMap获取。
-每个城市对应一个独立的Notebook文件，包含完整的代码和运行结果。
+Street network data retrieved from OpenStreetMap via OSMnx API.
+Each city has its own notebook containing complete code and results.
 
-## 运行方法
+## How to Run
 
-1. 安装上述所需依赖包
-2. 在Jupyter中打开任意城市的Notebook文件
-3. 按顺序运行所有单元格即可
+1. Install required packages
+2. Open any city notebook in Jupyter
+3. Run all cells in sequence
 
-## 主要发现
+## Key Findings
 
-- 地形是街道网络特征最强的预测因素
-- 北京和西安保留了帝制网格逻辑（方向熵约2.9）
-- 香港和澳门的玫瑰图接近圆形（方向熵约3.5）
-- 宏微框架使伪节点数量减少了40%以上
+- Terrain is the strongest predictor of street network character
+- Beijing and Xi'an retain imperial grid logic (entropy ~2.9)
+- Hong Kong and Macao show near-circular rose diagrams (entropy ~3.5)
+- Framework reduced pseudo-node counts by over 40%
