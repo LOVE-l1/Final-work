@@ -26,10 +26,3 @@ Each city has its own notebook containing complete code and results.
 1. Install required packages
 2. Open any city notebook in Jupyter
 3. Run all cells in sequence
-
-## Key Findings
-
-- Terrain is the strongest predictor of street network character
-- Beijing and Xi'an retain imperial grid logic (entropy ~2.9)
-- Hong Kong and Macao show near-circular rose diagrams (entropy ~3.5)
-- Framework reduced pseudo-node counts by over 40%
